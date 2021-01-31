@@ -1,3 +1,7 @@
 # Ignore editor temp files
 *.swp
 *.swo
+
+# Ignore items in downloads dir except for README
+downloads/**
+!downloads/README
