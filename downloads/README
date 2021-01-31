@@ -1,0 +1,6 @@
+DOWNLOADS
+=========
+
+This directory is used for downloading files used by scripts in this repository.
+
+Downloaded files are excluded from version control via this repository's .gitignore file.
