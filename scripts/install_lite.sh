@@ -39,10 +39,28 @@ umount ${disk_name}1
 printf "\nThe SD card write process is complete and it is now safe"
 printf "\nto remove the media from your machine.\n\n"
 
-# Mount SD card partition to add ssh file
+# Mount SD card boot partition (the smaller one) to add ssh file
 sudo mkdir /mnt/SD
-sudo mount /dev/sdc2 /mnt/SD
+sudo mount /dev/sdc1 /mnt/SD
 # Add blank ssh file
 sudo touch /mnt/SD/ssh
 # Unmount media
-sudo umount /mnt/SDD
+sudo umount /mnt/SD
+
+# To find raspberry pi on network use:
+# ping raspberrypi.local
+
+# If the name of the pi is changed, so will the ping command
+
+# SSH into the pi using
+# ssh pi@{IP address}
+
+# Default pi password is "raspberry"
+# change this after sign in for security reasons
+
+# If connection fails, you may need to run:
+# sudo ufw allow ssh
+
+
+
+
